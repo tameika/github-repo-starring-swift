@@ -3,7 +3,11 @@
 
 ## Personal Access Tokens
 
-Most of the API interaction we've been doing so far has been authorized using client IDs and secrets, which lets API calls act on behalf of an **application**. For this lab, though, we're going to be starring and unstarring Github repositories, which only makes sense if done on behalf of a **user**. In a few days, we'll see how to do this with OAuth. But for now, we're going to use a *personal access token* from Github's website.
+Most of the API interaction we've been doing so far has been authorized using client IDs and secrets, which lets API calls act on behalf of an **application**. For this lab, though, we're going to be starring and unstarring Github repositories, which only makes sense if done on behalf of a **user**. 
+
+"Repository Starring is a feature that lets users bookmark repositories. Stars are shown next to repositories to show an approximate level of interest. Stars have no effect on notifications or the activity feed." - GitHub.com
+
+In a few days, we'll see how to do this with OAuth. But for now, we're going to use a *personal access token* from Github's website.
 
 In the settings section of Github's website, go to "Personal access tokens" and then "Generate new token". Give the token some name (say, "FIS Labs" or something). You then need to specify the permissions you grant someone with this token. For this lab, granting just `public_repo` should be sufficient.
 
@@ -28,3 +32,5 @@ Bring in the code you've already written for your Github Repo List lab. You've a
   5. Finally, when a cell in the table view is selected, it should call your `ReposDataStore` method to toggle the starred status and display a `UIAlertController` saying either "You just starred `REPO NAME`" or "You just unstarred `REPO NAME`". You should also set the `accessibilityLabel` of the presented alert controller to either "You just starred `REPO NAME`" or "You just unstarred `REPO NAME`" (depending on the action that just occurred).
   6. Verify that the starring worked. You should go to the Github page for any repository that you tap and see its star status. For example, if you tapped on `mojombo/grit`, go to `http://www.github.com/mojombo/grit` and check if it's starred or not. Tap the cell for that repo again and refresh the page for the repository in your browser. You should see the star status of the repository change!
 
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/github-repo-starring-swift'>Github Repo Starring</a> on Learn.co and start learning to code for free.</p>
